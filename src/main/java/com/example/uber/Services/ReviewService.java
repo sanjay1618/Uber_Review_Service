@@ -21,12 +21,12 @@ public class ReviewService implements CommandLineRunner {
     @Override
 
     public void run(String... args) throws Exception {
-        System.out.println("Hello World");
-        Review r = Review.builder().content("Amazing ride").build();
-
-
-        Booking b = Booking.builder().bookingReview(r).bookingStatus(BookingStatus.COMPLETED).build();
-        bookingRepository.save(b);
+//        System.out.println("Hello World");
+//        Review r = Review.builder().content("Amazing ride").build();
+//
+//
+//        Booking b = Booking.builder().bookingReview(r).bookingStatus(BookingStatus.COMPLETED).build();
+//        bookingRepository.save(b);
     }
 
 }
