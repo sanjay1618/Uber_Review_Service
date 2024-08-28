@@ -25,6 +25,7 @@ public class Booking extends BaseModel{
 
     private Long totalDistance;
 
+    @Enumerated(EnumType.STRING)
     private BookingStatus bookingStatus;
 
     @ManyToOne
