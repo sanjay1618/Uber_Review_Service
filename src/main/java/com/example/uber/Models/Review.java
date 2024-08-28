@@ -20,6 +20,7 @@ import java.util.Date;
 
 public class Review extends BaseModel {
 
+
     @Column(nullable = false)
     private String content;
 

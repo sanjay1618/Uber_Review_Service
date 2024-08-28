@@ -2,6 +2,7 @@ package com.example.uber.Models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.*;
 
 import java.util.Date;
 
@@ -14,7 +15,7 @@ import java.util.Date;
 
 public class Booking extends BaseModel{
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, fetch = FetchType.LAZY)
     private Review bookingReview;
 
     @Temporal(value = TemporalType.TIMESTAMP)
