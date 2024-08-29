@@ -15,9 +15,6 @@ import java.util.Date;
 
 public class Booking extends BaseModel{
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, fetch = FetchType.LAZY)
-    private Review bookingReview;
-
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date startTime;
 

@@ -19,7 +19,7 @@ public interface ReviewRepository extends JpaRepository<Review, Integer> {
     List<Review> findAllByRatingLessThanEqual(int rating);
 
 
-    @Query("SELECT b.bookingReview from Booking b where b.id = :id")
+    @Query(nativeQuery = true, value = "SELECT * FROM review where booking_id = : id")
     Review findReviewByBookingId(Integer id);
 
 }
